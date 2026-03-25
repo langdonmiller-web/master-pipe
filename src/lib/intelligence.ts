@@ -43,6 +43,7 @@ export interface BriefingItem {
     contractType?: "NDA" | "MSA" | "DPA" | "Amendment"
     emailResponseTime?: number  // Your avg response time in hours
     emailThreadLength?: number
+    emailFrequency?: number  // Emails per week
     dealValue?: string
     isOverdue?: boolean
     daysOverdue?: number
