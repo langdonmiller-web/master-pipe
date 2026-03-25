@@ -128,7 +128,7 @@ export async function listRecords<T extends FieldSet>(
   });
 
   await query.eachPage((pageRecords, fetchNextPage) => {
-    records.push(...pageRecords);
+    records.push(...(pageRecords as Array<Record<T>>));
     fetchNextPage();
   });
 
