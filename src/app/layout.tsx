@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Master Pipe — Outreach Dashboard",
-  description: "Contact pipeline and outreach management",
+  title: "Master Pipe v2 — Partnership Pipeline",
+  description: "Partnership pipeline management for Kargo Inventory Partnerships",
 };
 
 export default function RootLayout({
