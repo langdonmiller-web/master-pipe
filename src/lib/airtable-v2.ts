@@ -178,7 +178,7 @@ export async function deleteRecord(
   recordId: string
 ): Promise<string> {
   const records = await base(tableName).destroy([recordId]);
-  return records[0];
+  return records[0].id;
 }
 
 /**
