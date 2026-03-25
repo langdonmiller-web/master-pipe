@@ -90,7 +90,7 @@ ${SIGNATURE_HTML}
     // Append to Drafts with the \Draft flag
     const result = await client.append("[Gmail]/Drafts", message, ["\\Draft"]);
 
-    return { id: result.uid?.toString() || "created", success: true };
+    return { id: result && typeof result === 'object' && 'uid' in result ? result.uid?.toString() : "created", success: true };
   } finally {
     await client.logout().catch(() => {});
   }
