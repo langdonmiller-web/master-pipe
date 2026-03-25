@@ -113,11 +113,11 @@ export interface ListOptions {
 /**
  * List records from a table with pagination support
  */
-export async function listRecords<T extends FieldSet>(
+export async function listRecords(
   tableName: string,
   options: ListOptions = {}
-): Promise<Array<Record<T>>> {
-  const records: Array<Record<T>> = [];
+): Promise<Array<Record<FieldSet>>> {
+  const records: Array<Record<FieldSet>> = [];
 
   const query = base(tableName).select({
     filterByFormula: options.filterByFormula,
@@ -129,7 +129,7 @@ export async function listRecords<T extends FieldSet>(
 
   await query.eachPage((pageRecords, fetchNextPage) => {
     pageRecords.forEach(record => {
-      records.push(record as unknown as Record<T>);
+      records.push(record);
     });
     fetchNextPage();
   });
@@ -140,20 +140,20 @@ export async function listRecords<T extends FieldSet>(
 /**
  * Get a single record by ID
  */
-export async function getRecord<T extends FieldSet>(
+export async function getRecord(
   tableName: string,
   recordId: string
-): Promise<Record<T>> {
+): Promise<Record<FieldSet>> {
   return await base(tableName).find(recordId);
 }
 
 /**
  * Create a new record
  */
-export async function createRecord<T extends FieldSet>(
+export async function createRecord(
   tableName: string,
-  fields: Partial<T>
-): Promise<Record<T>> {
+  fields: Partial<FieldSet>
+): Promise<Record<FieldSet>> {
   const records = await base(tableName).create([{ fields }]);
   return records[0];
 }
@@ -161,11 +161,11 @@ export async function createRecord<T extends FieldSet>(
 /**
  * Update an existing record
  */
-export async function updateRecord<T extends FieldSet>(
+export async function updateRecord(
   tableName: string,
   recordId: string,
-  fields: Partial<T>
-): Promise<Record<T>> {
+  fields: Partial<FieldSet>
+): Promise<Record<FieldSet>> {
   const records = await base(tableName).update([{ id: recordId, fields }]);
   return records[0];
 }
@@ -184,10 +184,10 @@ export async function deleteRecord(
 /**
  * Batch create multiple records
  */
-export async function batchCreateRecords<T extends FieldSet>(
+export async function batchCreateRecords(
   tableName: string,
-  records: Array<Partial<T>>
-): Promise<Array<Record<T>>> {
+  records: Array<Partial<FieldSet>>
+): Promise<Array<Record<FieldSet>>> {
   const chunks = [];
   const chunkSize = 10; // Airtable API limit
 
@@ -195,7 +195,7 @@ export async function batchCreateRecords<T extends FieldSet>(
     chunks.push(records.slice(i, i + chunkSize));
   }
 
-  const results: Array<Record<T>> = [];
+  const results: Array<Record<FieldSet>> = [];
 
   for (const chunk of chunks) {
     const created = await base(tableName).create(
