@@ -8,6 +8,7 @@ import {
   Send,
   CheckSquare,
   FileEdit,
+  Brain,
   Menu,
   X
 } from "lucide-react"
@@ -20,6 +21,11 @@ const navigation = [
     name: "Dashboard",
     href: "/",
     icon: LayoutDashboard,
+  },
+  {
+    name: "Intelligence",
+    href: "/intelligence",
+    icon: Brain,
   },
   {
     name: "Partners",
