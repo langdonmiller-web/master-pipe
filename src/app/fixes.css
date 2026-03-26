@@ -1,0 +1,281 @@
+/* Temporary CSS fixes for HSL color variables */
+/* This file ensures CSS variables are properly applied with hsl() wrappers */
+
+.bg-background {
+  background-color: hsl(0 0% 100%) !important;
+}
+
+.bg-card {
+  background-color: hsl(0 0% 100%) !important;
+}
+
+.bg-secondary {
+  background-color: hsl(210 40% 96.1%) !important;
+}
+
+.bg-destructive {
+  background-color: hsl(0 84.2% 60.2%) !important;
+}
+
+.bg-yellow-500 {
+  background-color: rgb(234 179 8) !important;
+}
+
+.text-foreground {
+  color: hsl(222.2 84% 4.9%) !important;
+}
+
+.text-card-foreground {
+  color: hsl(222.2 84% 4.9%) !important;
+}
+
+.text-muted-foreground {
+  color: hsl(215.4 16.3% 46.9%) !important;
+}
+
+.text-secondary-foreground {
+  color: hsl(222.2 47.4% 11.2%) !important;
+}
+
+.text-destructive-foreground {
+  color: hsl(210 40% 98%) !important;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.border {
+  border-color: hsl(214.3 31.8% 91.4%) !important;
+}
+
+.border-b {
+  border-bottom-color: hsl(214.3 31.8% 91.4%) !important;
+}
+
+.border-r {
+  border-right-color: hsl(214.3 31.8% 91.4%) !important;
+}
+
+.border-dashed {
+  border-style: dashed !important;
+}
+
+/* Typography fixes */
+.text-3xl {
+  font-size: 1.875rem !important;
+  line-height: 2.25rem !important;
+}
+
+.text-2xl {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+}
+
+.text-sm {
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+}
+
+.text-xs {
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
+}
+
+.font-bold {
+  font-weight: 700 !important;
+}
+
+.font-semibold {
+  font-weight: 600 !important;
+}
+
+.font-medium {
+  font-weight: 500 !important;
+}
+
+/* Layout fixes */
+.p-6 {
+  padding: 1.5rem !important;
+}
+
+.p-4 {
+  padding: 1rem !important;
+}
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem !important;
+}
+
+.px-3 {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+.py-2 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.px-2\.5 {
+  padding-left: 0.625rem !important;
+  padding-right: 0.625rem !important;
+}
+
+.py-0\.5 {
+  padding-top: 0.125rem !important;
+  padding-bottom: 0.125rem !important;
+}
+
+/* Margins */
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mt-1 {
+  margin-top: 0.25rem !important;
+}
+
+.space-y-6 > * + * {
+  margin-top: 1.5rem !important;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem !important;
+}
+
+.space-y-3 > * + * {
+  margin-top: 0.75rem !important;
+}
+
+.space-y-2 > * + * {
+  margin-top: 0.5rem !important;
+}
+
+.space-y-1 > * + * {
+  margin-top: 0.25rem !important;
+}
+
+/* Grid and gaps */
+.gap-4 {
+  gap: 1rem !important;
+}
+
+.gap-3 {
+  gap: 0.75rem !important;
+}
+
+.grid {
+  display: grid !important;
+}
+
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+}
+
+/* Sidebar fix */
+.w-64 {
+  width: 16rem !important;
+}
+
+.fixed.inset-y-0.left-0.z-40.w-64 {
+  background-color: hsl(0 0% 100%) !important;
+  border-right: 1px solid hsl(214.3 31.8% 91.4%) !important;
+}
+
+@media (min-width: 1024px) {
+  .lg\:pl-64 {
+    padding-left: 16rem !important;
+  }
+
+  .lg\:translate-x-0 {
+    transform: translateX(0) !important;
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2 !important;
+  }
+}
+
+/* Card styles */
+.rounded-lg {
+  border-radius: 0.5rem !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05) !important;
+}
+
+/* Flex utilities */
+.flex {
+  display: flex !important;
+}
+
+.flex-col {
+  flex-direction: column !important;
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+.items-center {
+  align-items: center !important;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+/* Badge styles */
+.inline-flex.items-center.rounded-full {
+  display: inline-flex !important;
+  align-items: center !important;
+  border-radius: 9999px !important;
+  padding: 0.125rem 0.625rem !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+}
+
+/* Min height */
+.min-h-\[100px\] {
+  min-height: 100px !important;
+}
+
+.min-h-screen {
+  min-height: 100vh !important;
+}
+
+/* Transform utilities */
+.-translate-x-full {
+  transform: translateX(-100%) !important;
+}
+
+.transform {
+  transform: translateX(0) !important;
+}
+
+/* Fix hover states */
+.hover\:bg-secondary\/50:hover {
+  background-color: hsl(210 40% 96.1% / 0.5) !important;
+}
+
+.hover\:bg-secondary\/80:hover {
+  background-color: hsl(210 40% 96.1% / 0.8) !important;
+}
+
+.hover\:bg-destructive\/80:hover {
+  background-color: hsl(0 84.2% 60.2% / 0.8) !important;
+}
