@@ -228,6 +228,36 @@ body {
   left: 0 !important;
 }
 
+/* Fix sidebar visibility */
+.fixed.inset-y-0.left-0.z-40.w-64 {
+  background-color: hsl(0, 0%, 100%) !important;
+  border-right: 1px solid hsl(214.3, 31.8%, 91.4%) !important;
+  transform: translateX(0) !important;
+  z-index: 40 !important;
+}
+
+/* Ensure links are visible */
+nav a {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  padding: 0.5rem 0.75rem !important;
+  border-radius: 0.375rem !important;
+  transition: all 0.2s !important;
+  text-decoration: none !important;
+  color: hsl(215.4, 16.3%, 46.9%) !important;
+}
+
+nav a:hover {
+  background-color: hsla(210, 40%, 96.1%, 0.5) !important;
+  color: hsl(222.2, 84%, 4.9%) !important;
+}
+
+nav a.bg-secondary {
+  background-color: hsl(210, 40%, 96.1%) !important;
+  color: hsl(222.2, 84%, 4.9%) !important;
+}
+
 /* Responsive utilities */
 @media (min-width: 1024px) {
   .lg\:pl-64 {
